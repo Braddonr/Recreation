@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreate</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<body class="antialiased bg-gray-200 flex min-h-screen">
+    <div class=" rounded-2xl flex -space-x-5 fixed top-12 bottom-3 left-24 xl:right-50"> 
+      <form class=" float-right bg-white shadow-md rounded-lg  px-8 pt-6 pb-96 mb-4 bottom-0">
+        <div class="text-md font-medium text-black">Filters</div>
+          <p class="text-slate-300 text-sm">Filter parcels by yourself</p>
+        <div> 
+          <p class="text-slate-300 text-sm py-5">Filter by:
+          <button href="#" class="bg-white-300 active:bg-purple-200 active:shadow-lg active:text-white transition duration-150 ease-in-out focus:outline-none bg-white-500 hover:bg-purple-100 text-sm text-gray-500 py-1 px-2 w-24">
+            Any 
+          </button>
+          <button href="#" class="bg-white-300 active:bg-purple-200 active:shadow-lg active:text-white hover:bg-purple-100 text-gray-500 text-sm py-1 px-2 w-24">
+            Domestic
+          </button>
+          <button href="#" class="bg-white-300 active:bg-purple-200 active:shadow-lg active:text-white hover:bg-purple-100 text-gray-500 text-sm  py-1 px-2 w-24">
+            International 
+          </button>   
+          </p>
+</div> 
+    <div class="flex items-center">
+        <label for="floatingInput" class="block roude text-slate-300 text-sm mb-10">Date:</label>
+          <div class="block datepicker relative form-floating mb-3 xl:w-10/12">
+            <input type="text" 
+              class="block h-7 w-80 form-control py-1 px-2 text-slate-300 text-sm font-normal bg-white bg-clip-padding border border-solid border-gray-300 rounded-lg transition ease-in-out m-0 focus:text-gray-700 focus:bg-pink focus:border-pink-600 focus:outline-none -mb-4 shadow-lg"
+              placeholder="Enter date here"/>
+          </div>
+    </div>
+    <div>
+      <label for="floatingInput" class="block text-slate-300 text-sm mb-10">Shop:</label>
+      <select class="flex items-center relative rounded-lg container mx-auto md:py-1 -mb-64 h-7 max-w border border-gray-300 font-normal text-gray-500 text-sm focus m-auto: bg-white bottom-10 shadow-xl" x-cloak id="select">
+        <div>  
+            <option value="1" class="block text-left bg-purple-100"><img
+                src="http://media.corporate-ir.net/media_files/IROL/17/176060/Oct18/Amazon%20logo.PNG"
+                class="rounded-full w-3 mb-4 mx-auto"
+                alt="Amazon logo"
+                  />Amazon 
+        </div> 
+            </option>
+        <div>  
+            <option value="2" class="text-left bg-purple-100"><img
+                src="https://logos-world.net/wp-content/uploads/2020/11/Shopify-Logo.png"
+                class="rounded-full w-8 mb-4 mx-auto"
+                alt="Shopify logo"
+                  />Shopify
+        </div> 
+            </option>
+        <div>  
+            <option value="3" class="text-left bg-purple-100"><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/2560px-EBay_logo.svg.png"
+                class="rounded-full w-8 mb-4 mx-auto"
+                alt="Ebay logo"
+                  />Ebay
+        </div> 
+              </option>
+          <div>  
+              <option value="4" class="text-left bg-purple-100"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Etsy_logo.svg/2560px-Etsy_logo.svg.png"
+                  class="rounded-full w-8 mb-4 mx-auto"
+                  alt="Etsy logo"
+                    />Etsy
+          </div> 
+              </option>
+      </select>
+
+    </div>
+<div class="mt-80 justify-center">
+    <div class="flex justify-center">
+        <div>
+          <div class="dropend relative">
+            <button
+              class="
+                dropdown-toggle
+                px-7
+                py-2
+                bg-white-600
+                text-slate-400 
+                text-sm
+                leading-tight
+                rounded
+                shadow
+                hover:bg-purple-300 hover:shadow-lg
+                focus:bg-purple-300 focus:shadow-lg focus:outline-none focus:ring-0
+                active:bg-purple-300 active:shadow-lg active:text-white
+                transition
+                duration-150
+                ease-in-out
+                flex
+                items-center
+                whitespace-nowrap
+                h-7 w-max
+                mb-4
+              "
+              type="button"
+              id="dropdownMenuButton1e"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+
+            >
+              Select Courier
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="caret-down"
+                class="w-1.5 ml-52"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 192 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                ></path>
+              </svg>
+            </button>
+            <ul
+              class="
+                dropdown-menu
+                min-w-max
+                absolute
+        
+                bg-white
+                z-50
+                float-left
+                py-2
+                list-none
+                text-left
+                text-slate-300 
+                text-sm
+                rounded-lg
+                shadow-lg
+                mt-1
+                
+                m-0
+                bg-clip-padding
+                border-none
+              "
+              aria-labelledby="dropdownMenuButton1e"
+            >
+</div>
+<div class="flex items-center mt-10">
+  <label for="floatingInput" class="flex roude text-slate-300 text-sm -mt-16">Price from:</label>
+    <div class="block relative form-floating mb-4 xl:w-10/12 px-1">
+      <input type="text" 
+       class="block h-12 w-28 form-control py-1 px-2 text-slate-300 text-sm font-normal bg-white bg-clip-padding border border-solid border-gray-300 rounded-lg transition ease-in-out focus:text-gray-700 focus:bg-pink focus:border-pink-600 focus:outline-none shadow-lg"
+        placeholder="£"/>
+    </div>
+  <label for="floatingInput" class="flex roude text-slate-300 text-sm -mt-16">Price to:</label>
+  <div class="inline-block relative form-floating mb-4 xl:w-10/12">
+    <input type="text" 
+      class="h-12 w-28 form-control py-1 px-2 text-slate-300 text-sm font-normal bg-white bg-clip-padding border border-solid border-gray-300 rounded-lg transition ease-in-out focus:text-gray-700 focus:bg-pink focus:border-pink-600 focus:outline-none -mb-2 shadow-lg"
+      placeholder="£"/>
+  </div>
+</div>
+<div class="flex space-x-2 justify-center mt-16">
+  <div>
+    <button type="button" class="inline-block mr-16 px-3 py-2.5 bg-white-600 text-red-600 font-medium text-sm leading-tight rounded-lg hover:bg-red-200 hover:shadow-lg focus:bg-red-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-400 active:shadow-lg transition duration-150 ease-in-out">Reset</button>
+    <button type="button" class="inline-block ml-2 px-3 py-2.5 bg-white-900 text-gray-900 font-medium text-sm leading-tight rounded-lg hover:bg-white-50 hover:shadow-lg focus:bg-white-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-300 active:shadow-lg transition duration-150 ease-in-out">Cancel</button>
+    <button type="button" class="inline-block px-3 py-2.5 bg-purple-900 text-white font-medium text-sm leading-tight rounded-lg shadow-md hover:bg-pink-600 hover:shadow-lg focus:bg-pink-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-700 active:shadow-lg transition duration-150 ease-in-out">View results(15)</button>
+  </div>
+</form>
+<div class="rounded-2xl fixed flex top-12 bottom-3 right-14"> 
+  <form class="bg-white shadow-md rounded-lg px-96 pt-6 pb-96 mb-4">
+     <div class="-ml-96 px-8 text-md font-medium text-black"> Set courier</div>
+        <p class="-ml-96 px-8 text-slate-300 text-sm">Select courier from list below</p>
+      <div class="top-5 relative text-gray-600 focus-within:text-gray-400">
+        <span class="absolute inset-y-0 left-0 flex items-center scroll mr-16 ">
+          <input type="search" name="q" class="-ml-80 px-20 py-2 border-white text-slate-50 text-xs rounded-lg border-gray pl-10 focus:outline-none focus:bg-white focus:text-gray-500" placeholder="Search available couriers" autocomplete="off"> 
+            <button type="submit" class=" -ml-96 px-24 focus:outline-none focus:shadow-outline">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" class="w-4 h-4"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </button>
+        </span>   
+     </div>
+  <div class="-mr-96 mt-96 py-24 ml-36 space-x-1">
+    <button type="button" class=" ml-2 px-5 py-2.5 bg-white-900 text-gray-900 font-medium text-sm leading-tight rounded-lg hover:bg-white-50 hover:shadow-lg focus:bg-white-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-300 active:shadow-lg transition duration-150 ease-in-out">Cancel</button>
+    <button type="button" class=" px-7 py-2.5 bg-purple-900 text-white font-medium text-sm leading-tight rounded-lg shadow-md hover:bg-pink-600 hover:shadow-lg focus:bg-pink-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-700 active:shadow-lg transition duration-150 ease-in-out">Save</button>
+  </div>
+  <div class="rounded-2xl fixed flex  top-8 bottom-16 right-14"> 
+    <div class=" pt-6 pb-96 mb-4 -ml-96 px-8">
+        <div class="border-b border-gray-200 py-24">
+                  <table class="-ml-96 px-8 h-0"> 
+                      <tbody class="bg-white">
+                          <tr class="h-0 whitespace-nowrap bg-white border-gray-100 transition duration-300 ease-in-out hover:bg-purple-50 hover:border-purple">
+                              <td class="px-6 py-4 text-sm text-gray-900 rounded-l-2xl">
+                                  <label class="inline-flex items-center">
+                                    <input class="text-indigo-500 w-2 h-2 mr-2 focus:ring-purple-400 focus:ring-opacity-1 border border-purple-300 rounded" type="checkbox" />
+                                  </label>
+                              </td>
+                              <td class="-px-0 py-4 text-sm text-gray-900">
+                                 <div class="flex items-center">
+                                    <div class="flex-shrink-0 w-10 h-10">
+                                      <img class="w-9 h-9 rounded-full" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0NDQ0NDQ0NDQ0NDg8NDQ0NFREWFhURFRUYHCggGBolHhUVITEtJykrLi4uFx8zODMtOCgtLisBCgoKDg0OGhAQFS0iHyUtLTUtMC0rKy0rKy0tLS8tLi0rLS0tLTcrLS0tLSstNy03Ky0tLS0xLSsrKy0tLS0tK//AABEIAMoA+gMBIgACEQEDEQH/xAAcAAEAAwEBAQEBAAAAAAAAAAACAAEDBQYEBwj/xAA9EAACAQMABggDBQYHAQAAAAAAAQIDBBEFEiExQZEGExVRUmFxgQciUxQjMqGxQmJygrPBJDR0ksLR8HP/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQMCBQT/xAAhEQEAAgICAgIDAAAAAAAAAAAAAQIDESExBBIyQSJhkf/aAAwDAQACEQMRAD8A9+kJIpIaRURISREhJARISREhJARItItItICJFpFpF4ArBeBJF4AOCYHgmADgmB4JgAYJgeCsADBWDTBWAM8FNGjRTQGbRTQ2imgM2gtGjQWgM2gtGjQWgM2gtGjC0Bm0UNhwA0JIpCQFoSREJICJCSIkJARISREhJARISREhJAVgtItItICsF4LwXgKOCYHgmABgmB4KwAMFYNMFYAzwVgbRTQRm0U0aNBaAzaC0aNBaAzaC0aMLAzaC0NhaAzZWBsICQ0FDQFpCRSGgLQkUhIC0hJESEkBEhJESLSCokJIiQsAUkXgtIvBBWCYFgmCg4KwPBMEGbRTR5npZ0gdL/D28l1qalUmnlQxtUPV8fL1PRWVzGvSp1o/hqQjPHdnev7GtsVq1i0x26msxGzaC0aNBaM3LNopobQWggNAZo0FgZtBZowMAMDNGBgBhGwgJDQUNAWhpBQ0BaEkUhpAWkJIpCQFpDSKSEgqJCSIkJIgiReC0i0gKwTBVarCnFzqSjCC3ym1GK92eX0r03t6eY20XcT3a7zCkn672d0x2v8YWKzPT085KKcpNRilltvCS82eP6QdLopSpWb1m9krjhH+Dv9Ty+k9NXN2/vqjceFOPy01/Lx9z4kejh8OK835bVx67KUntbbbfF7W2e86B3OvbTpN7aNR4/glt/XWPz9yyeu+H1TFevDhKipe8Zpf8mbeVXeKf06yR+L2zQWjRhZ4r5mbQWNhZQGBo0YGEBgZowMAMDNGBgBlCYQEhIKGgEhIpCQCQ0FCQCQkUhIKSEikNEFoSRSEgJOSinKTUYxTcpNpJJcWeO0306pwzTsoqrJZTrTTVJP8AdW+X5I4HTLpJK7qSoUpNWtOWFhtdfJb5PyzuXv6ebR6GDxY17X/jauP7l92kNJXF1LXr1Z1HwTfyR9I7kfOj5Z3cI7E9Z+X/AGZO7k92Iry38z74iIjUNeHQc1He8fqB1W92xfmfFB58z6IHQ+imez+HtBurXq4+WNJU8+cpJ/pE83oXRFe8nqUY7E/nqS2U6a833+W8/UtEaMp2dGNGnt/anN/inN75P/24+Ty80RSaR3LPJaNafS0FmjAzyWAMDNGBlAYGaMDCAwMbCwAwMbCwM2UJhAtDQUJANCQUJANDQENAJDQENBTQkFCRA0cbplfO30fXlF4lNKjFrenN4bXtk7KPK/EzP2Cm+CuqbfpqVDTDG7xC17fmFWrGEcv2XFvuRz61zKp5R8K/v3mFxXdSWeG6K7kSJ7W30zLWBvA+/o/0cvNIS/w1LME8SrTepRi/4uPtln6VoL4b2lDE7qbuqiw9TbCgn6b5e79jHJ5FKdzy5m0Q/OdE6MuLuepbUZ1WniTivkj/ABSexe577Qnw+UcTvamu9/U0W1D0lPe/bHqemvtNWFhDUc6cFBYjQopOS8tWO73PC6d+I1zJuNpThQj46iVWq/b8K/MwnJmy/GNQ53a3T9It7enRgqdKEacI7owWqkJn5Lonp9pCnKMq8o3FNv56coQhLHfGUUsP1yj9Us7uncUqdek9anVipxfHD7/Ph7HyZcN6fJnasx2bCxsDMXIMLGwMAMDGwsoDAxsDCCwMbAwAwiYQLQ0BDQDQkFCQDQ0BDQCQ0BDQU0JAQ0QNHC6eWbr6Ku4xWZQp9dFLe9T5n+SZ3ELCaw9qaw09zR1W3rMSQ/mmJrT2vHM7PTTQEtG3k6ai/s9RupbS4Onxh6x3cnxPJ2VzPOc73nD2ns1tFoiYfRE7foGjuk+kKcI04XVSMIpRjFKGIxW5LYfVU0xd11irc1pp8HNpP2R46nfOEdaTXkkll+hhX0pVqbNZwh3J4z6s6iKV51Drh6G8u6UMrWTfhjtfv3HMqVtd7sI5cK3cbwk3vHts2++Esn6z8NaspaO1Xup3FWMfRqMv1kz8ioZlJQhFznJqMYxWZNvckuLP3Pozov7FZ0bd4c0nOq1udWTzLlu9j5PMtHpEM8k8OmwMTCzzWIsDEwMoLCxMDALAxsDCCwMTCwAwiYQLQ0ZoaAaGgISAaGgISAaGgISCtEJGaGiBoaZmmJMD49NaHtr+hKhcw14PbFp4nTnjClF8Gfmlf4PSpOUqWkodVHMvv6DUoxW3bKMsPHoj9ZTOB8QLiVLQ2k5xbUvslWCa3rX+RvlJmuLJes6iXVZmH883FVOcsS14RbUJJYUo52SS894YybZg+4tz4I9Rs+xVVHzfcfbo23uLurGhb051Kk/wwgsvHFt8Eu/cbdEOit1pWtqUVqUYP765mm6VPy/el5L3wfvHRro3aaMo9VbQ+aWOtrT21asu+T7vJbEY5c8U4jtza2nH6FdCaej0q9dxrXjWxrLp0E1tUO9+fI9c2RsLZ517zadyymdowsjC2cophbLYGUUwsthYQWBiYWAWBiYWAWEthAtCQEJAaISAhIDRCRmhoBpjRmmJAaISZmmJMK0TEmZpiTINMnM6U2Lu9HX1tH8Va1rwh/8ATUbj+aR0ExJlidTsfyk/Rp43PY15Hd6F9G6mlbyNvFuFKK6y5qpZ6ulnh+83sXu+B2/ih0UlY3UrqlF/ZLqcppxXy0a0nmVN9ybba9WuB734P6Jjb6LjXx95ezlWlLj1cW404+mE3/Mz0MmXWP2j7bTbjb2OjNH0LOhTt7emqVGmtWMY/m2+LfF8T6chyTJ50ztivIWyNhbAtsLI2FsCNgZbC2VFMLLYGBTCy2FgFhZbCwCwlsoCISAhIDRCRmhpgNCTAmJMDRMSZmmJMDRMWTNMSYDTEmZpl5Cm5pb2ZTvacd8kGpRUuJ8FxohT/aYgO/vbKvSnQrqFWlUjqzpzSlGS9DLRd7ZWtvRtaM8UqFONOmnLWagtyb4nMueiMam+cuZhS6EQi8qc/wDczvjWtj1MNJ0Zbpo3jcQe6SODbdHVD9t8zp0LFQ/aZzqB92SmwRWC8kFthbKbKyBGwtkbC2ERsLZGwtgRhZGwtgUwstsDAplEZQFIaM0xJgaISM0JMDRMSYEy0wNExJmaYkwNExJmaZaYGiZeQJl5AeS8gyTIDyTIckyAskyHJMgXkrJWSsgW2U2VkpsCNhbI2FsC2wtkbC2BGwtkbCwKbC2WwsCmEtsIFJjTPv0XoyNe3t67m4utQpVXFJNRcoKWPzPq7Ej9SXJAchMSZ1uxY/UlyRfY0fqS5IDlJiTOp2PH6kuSJ2RHxy5IDmJiTOl2THxy5IvsqPjlyQHOTLTOj2XHxvkidmR8b5IDnpl5Pv7Nj43yRfZsfG+SCvgyXk+7s2PjfJF9nLxvkgPgyTJ93Z0fG+SL7OXjfJAfBkmT7+zl43yJ2cvG+QHPyU2dHs1eN8kV2bHxvkgOdkps6XZkfG+SK7Mj43yQRzWwtnU7Lj43yRXZUfHLkgOW2Fs63ZMfHLkiuyI+OXJAchsLZ2Ox4/UlyRXY0fqS5IDjNhbO12LH6kuSK7Ej9SXJAcRso7fYcfqS5InYUfqS5IDbo3/kLH/R239KJ0TndG/8hY/6O2/pROiRUIQgEIQgEIQgFM8rpChpCrVzGVZOjcV6tCqoUEoJ21eMYRjKLysuCbec63Dh6soDylaWk6vVxmril1dRTqyowofMvtMXGMdZPKVN7fTiS2hpSm6cFUrOEVWz1lKhUdSprz2OSxqxxqar83nO49WUB5a5paScOrdW6n9za1JThC2hKNSNanKol8mJSac13Yjhp5y11ulOseevVLXl1rjTtnUhHXl1fUZXzJx1dbWzjOzG5enZYHnNDRvqNG6hKm1NyuJ2icYdXmdWtNa+Nus3jPDEo44mFerpRJdU7iT6uOp1tK1SlPE+s6zC2NfJq4xnjnaeqKA42jI30a7VapOrRcayTqQox1ZLq9R/Ik8vWqL+VbuI0/b3E7enBKpUuFHZUt80qSrLVy3HXzFPbh5lq+Z3SMDyl5a1nDSEFTvZdbdSqUJ60pKObWEE4pzXyKcZYSwk2pY4m3UVta6ToVqsp29o4KrOUqH2pOcZYllfKtaDeEspN7WelIwPJU9G16M3Dq7i4VLrMylVbhcWyoJU6STlsn1ii9yxqyecPbtU0TXpQh1EW61vbVqvWucmq13JSUaaTltgnKbw8boLvPTlAc/o/GtG3UKylmE5xhKacalSnnZOacniT28fPZnC6RSLAhCEAhCEAhCEAhCEA//Z"
+                                          alt="">
+                                    </div>
+                                  <div class="ml-2">
+                                      <div class="text-sm leading-5 text-gray-900">
+                                          Mule Bag Drop-Off/ Collection
+                                      </div>
+                                  </div>
+                                </div>
+                              </td>      
+                              <td class="px-6 py-4 text-sm text-gray-900">
+                                £9,99
+                              </td>
+                              <td class="px-6 py-2 text-xs text-gray-500 rounded-r-2xl">
+                                <a href="#" class="px-4 py-1 w-1 text-xs text-purple-900 bg-white border border-gray-200 rounded-full">!</a>
+                              </td>
+                          </tr>
+                          <tr class="whitespace-nowrap bg-white border-gray-100 transition duration-300 ease-in-out hover:bg-purple-100 hover:border-purple">
+                            <td class="px-6 py-4 text-sm text-gray-900 rounded-l-2xl">
+                                <label class="inline-flex items-center">
+                                  <input class="text-indigo-500 w-2 h-2 mr-2 focus:ring-purple-400 focus:ring-opacity-1 border border-purple-300 rounded" type="checkbox" />
+                                </label>
+                            </td>
+                            <td class="-px-0 py-4 text-sm text-gray-900">
+                               <div class="flex items-center">
+                                  <div class="flex-shrink-0 w-10 h-10">
+                                    <img class="w-9 h-9 rounded-full" src="https://dvow0vltefbxy.cloudfront.net/assets/landing/carriers/landmark-global-1b34160875d2f19e6b477a0e3921a648796077e8b4b7d7b473b05de6d7c8b9e9.svg"
+                                        alt="">
+                                  </div>
+                                <div class="ml-2">
+                                    <div class="text-sm leading-5 text-gray-900">
+                                        Landmark Drop-Off Tracked 
+                                    </div>
+                                </div>
+                              </div>
+                            </td>      
+                            <td class="px-6 py-4 text-sm text-gray-900">
+                              £9,99
+                            </td>
+                            <td class="px-6 py-2 text-xs text-gray-500 rounded-r-2xl">
+                              <a href="#" class="px-4 py-1 w-1 text-xs text-gray-400 bg-white border border-gray-200 rounded-full">Find drop-off point ></a>
+                            </td>
+                        </tr>
+                        <tr class="whitespace-nowrap bg-white border-gray-100 transition duration-300 ease-in-out hover:bg-purple-100 hover:border-purple">
+                          <td class="px-6 py-4 text-sm text-gray-900 rounded-l-2xl">
+                              <label class="inline-flex items-center">
+                                <input class="text-indigo-500 w-2 h-2 mr-2 focus:ring-purple-400 focus:ring-opacity-1 border border-purple-300 rounded" type="checkbox" />
+                              </label>
+                          </td>
+                          <td class="-px-0 py-4 text-sm text-gray-900">
+                             <div class="flex items-center">
+                                <div class="flex-shrink-0 w-10 h-10">
+                                  <img class="w-9 h-9 rounded-full" src="https://dvow0vltefbxy.cloudfront.net/assets/landing/carriers/norsk-global-e33e148286584c42abc01ab61c5f11b70462a14ea678e6a4f5ffdcb9150d6114.svg"
+                                      alt="">
+                                </div>
+                              <div class="ml-2">
+                                  <div class="text-sm leading-5 text-gray-900">
+                                    Norsk International Express Collection
+                                  </div>
+                              </div>
+                            </div>
+                          </td>      
+                          <td class="px-6 py-4 text-sm text-gray-900">
+                            £9,99
+                          </td>
+                          <td class="px-6 py-2 text-xs text-gray-500 rounded-r-2xl">
+                            <a href="#" class="px-4 py-1 w-1 text-xs text-gray-400 bg-white border border-gray-200 rounded-full">April 6 ></a>
+                          </td>
+                      </tr>
+                    <tr class="whitespace-nowrap bg-white border-gray-100 transition duration-300 ease-in-out hover:bg-purple-100 hover:border-purple">
+                      <td class="px-6 py-4 text-sm text-gray-900 rounded-l-2xl">
+                          <label class="inline-flex items-center">
+                            <input class="text-indigo-500 w-2 h-2 mr-2 focus:ring-purple-400 focus:ring-opacity-1 border border-purple-300 rounded" type="checkbox" />
+                          </label>
+                      </td>
+                      <td class="-px-0 py-4 text-sm text-gray-900">
+                         <div class="flex items-center">
+                            <div class="flex-shrink-0 w-10 h-10">
+                              <img class="w-9 h-9 rounded-full" src="data:image/jpeg;base64,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"
+                                  alt="">
+                            </div>
+                          <div class="ml-2">
+                              <div class="text-sm leading-5 text-gray-900">
+                                  DPD Drop-Off International- Tracked and Signed
+                              </div>
+                          </div>
+                        </div>
+                      </td>      
+                      <td class="px-6 py-4 text-sm text-gray-900">
+                        £9,99
+                      </td>
+                      <td class="px-6 py-2 text-xs text-gray-500 rounded-r-2xl">
+                        <a href="#" class="px-4 py-1 w-1 text-xs text-gray-400 bg-white border border-gray-200 rounded-full">Find drop-off point ></a>
+                      </td>
+                  </tr>
+                  <tr class="whitespace-nowrap bg-white border-gray-100 transition duration-300 ease-in-out hover:bg-purple-100 hover:border-purple">
+                    <td class="px-6 py-4 text-sm text-gray-900 rounded-l-2xl">
+                      <label class="inline-flex items-center">
+                        <input class="text-indigo-500 w-2 h-2 mr-2 focus:ring-purple-400 focus:ring-opacity-1 border border-purple-300 rounded" type="checkbox" />
+                      </label>
+                  </td>
+                  <td class="-px-0 py-4 text-sm text-gray-900">
+                     <div class="flex items-center">
+                        <div class="flex-shrink-0 w-10 h-10">
+                          <img class="w-9 h-9 rounded-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQUAAADBCAMAAADxRlW1AAAAeFBMVEX/zADUBRHRABL/0wD/1QD/0QDcPw/hVg3/zgD9xALymwf4tAbofQz7ugPgTg7fVA77vwPYIxDnegziWQ3pdgvxlwj1pQbrggr3rQbaMw/jXw39wQLfSg7uign/yQD0oQfmbQz3rwbXGRDlZgzuiQnbOQ/vkAnZLRBvMPArAAAEPElEQVR4nO3Z6XLiOhCAUZCspFnDvmchGeD93/B6Y4nVcmzfqnFq6js/EZbkNuqWRacDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtE1cRaJdXfI9pWMJjqh2/ve4zWxYYn312h+I9eZqX70rFr3sW+7odTxbSWDE2bLVMMika6rqzjeFONil/62FzTru+R1PO6I3mG6vzSiI23ZrMPO3x9nKyHhfOWRB6Ngn/+pJEgR3UvrduFZuPxd9+PdRGobpQxhEpv438vZo4XVs+i4wolnblu4/Ff+iawUhnvDTfcLR3L/T/KG6d7/pI0oa+koQxq0GQSZ1g3B9ogl79u90mCeFvX/hNqkDcRpSdFpNCtov+kfXBycDP4R5m5pt9hJoMINW60O0q/9TiOVFv/PpN12Tgr/2zXuaFL6U9fDa6npwfyqVRz8K6a1GL/6dHp0krL/2zSJJCloaMs9Rm0GI61wVz8VpX9K8YNdKUpBe4k2pn2lOlZEf0u5UWt42yo2NilzeEhWru5klUXDHeouplyYFJQ21nBQeRevxS8EqVPbTZydvtWKQ1U8tDZllq0nhkVspOxzRW8woabCHWkGYpUnBL6xds2s3KTxQirvZWb3FnJOGaFhrPaSbaq2wdi9tJ4U7ZWOfpyzrJYX02blNvaSQ1E+1sHYnvyYIWnHPUpYLJIVerRjE9TPuyz4r66H/e5KCUtzP+RZwWtw8pElBtnV+CuZP0pnzC2v+YvEraBv7a8qSzn7yTX4IMOnVkV4j+1DLX+C8fcAjm9Twi/+MJpHNFL6eJgtlb2HD244oTzCl8/h+QTxEuKlREM6np7DTQdSNfffzMFYcPpL1LT2/n3n+lml33nDbNP9FX2Xz+OYyEPe+VZu2x2ZhcMPSV4SB1DhfyA/FopOfRvJMb/36ac5pZnytPsrCyig031WzKMh+UGLktBOzoOypho6Q1PqZFVZ1pxAQby1kFJpw00QiYWmjnxSCRunrQ+gISa+f2aZIe30IeRNXMutmQShbEfGA1c8XzKWXJgXlCOmU13znn7ZmPx/xIxccZuOccqr9P1eEW4dHHIm2sQ/M7isrD9rx8f6H09aOq5wVzNqqL9/X5oZRCFdKG1e3qsvVTFdZkdJ2mas8KSgvZNelUjktjOOkUFbbm6aFwbKvWo7ih1ttuZrPs+R3GjpCCiyV679udlYtDJ9xDN71+WaTbvjWEe9bdfGA0fjHuSXZY7e6/bvoF5TbsbxTNtX3jG5XW6Md3RU6O4o7l1b2ppWyP37WjAciq8PDB8m5ym13ND6kxvPZeeDuf8nJx0uxn5f8TmXpjTNePfzbJNFoOfyaq3O5XXC20tOne591oyjE212dhJseFP5Jdmo/oXG+z1iccnVhtB/n9GtewwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPCP+g+6mU9SjX2N3AAAAABJRU5ErkJggg=="
+                              alt="">
+                        </div>
+                      <div class="ml-2">
+                          <div class="text-sm leading-5 text-gray-900">
+                              DHL Collection Tracked & Signed
+                          </div>
+                      </div>
+                    </div>
+                  </td>      
+                  <td class="px-6 py-4 text-sm text-gray-900">
+                    £9,99
+                  </td>
+                  <td class="px-6 py-2 text-xs text-gray-500 rounded-r-2xl">
+                    <a href="#" class="px-4 py-1 w-1 text-xs text-gray-400 bg-white border border-gray-200 rounded-full">Select date ></a>
+                  </td>
+              </tr>
+              <tr class="whitespace-nowrap bg-white border-gray-100 transition duration-300 ease-in-out hover:bg-purple-100 hover:border-purple">
+                <td class="px-6 py-4 text-sm text-gray-900 rounded-l-2xl">
+                    <label class="inline-flex items-center">
+                      <input class="text-indigo-500 w-2 h-2 mr-2 focus:ring-purple-400 focus:ring-opacity-1 border border-purple-300 rounded" type="checkbox" />
+                    </label>
+                </td>
+                <td class="-px-0 py-4 text-sm text-gray-900">
+                   <div class="flex items-center">
+                      <div class="flex-shrink-0 w-10 h-10">
+                        <img class="w-9 h-9 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8i4AxMQdfEuO4StyQ5Robs486dNv4fhdt_Q&usqp=CAU"
+                            alt="">
+                      </div>
+                    <div class="ml-2">
+                        <div class="text-sm leading-5 text-gray-900">
+                            Hermes Next-Day Drop Off- Tracked
+                        </div>
+                    </div>
+                  </div>
+                </td>      
+                <td class="px-6 py-4 text-sm text-gray-900">
+                  £9,99
+                </td>
+                <td class="px-6 py-2 text-xs text-gray-500 rounded-r-2xl">
+                  <a href="#" class="px-4 py-1 w-1 text-xs text-gray-400 bg-white border border-gray-200 rounded-full">Select date ></a>
+                </td>
+            </tr>
+          </tbody>
+      </table>   
+  </div>
+</div>
+</div>
+</div>
+</div>         
+</div>
+    </form>
+</body>
+ </html>
